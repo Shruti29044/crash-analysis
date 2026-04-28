@@ -61,7 +61,7 @@ st.markdown("""
 @st.cache_data
 def load_data():
     # Load combined 2019-2026 MCMIS sheet
-    df = pd.read_excel("OH_crash_260327.xlsx", sheet_name="OH 2019 - 2026 MCMIS")
+    df = pd.read_csv("OH_crash_data.csv")
     df['Crash Date'] = pd.to_datetime(df['Crash Date'], errors='coerce')
     df['Is_Rumpke'] = df['Carrier Name'].str.contains('Rumpke', case=False, na=False)
     # Rumpke territory counties
