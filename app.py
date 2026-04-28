@@ -125,8 +125,8 @@ rumpke_filtered = filtered[filtered['Is_Rumpke']]
 # ============================================================
 st.markdown("""
 <div style='margin-bottom:8px'>
-    <h1 style='color:white;font-size:28px;margin:0'>🚛 Ohio Commercial Truck Crash Intelligence</h1>
-    <p style='color:#6b7280;font-size:14px;margin:4px 0 0 0'>
+    <h1 style='color:#cc0000;font-size:28px;margin:0'>🚛 Ohio Commercial Truck Crash Intelligence</h1>
+    <p style='color:#666666;font-size:14px;margin:4px 0 0 0'>
         FMCSA MCMIS Data · 2019–2026 · Rumpke Waste & Recycling Focus
     </p>
 </div>
@@ -135,9 +135,9 @@ st.markdown("""
 st.markdown(f"""
 <div class='alert-box'>
     <strong style='color:#ff3b3b'>📊 Key Finding:</strong>
-    <span style='color:#9ca3af'> Rumpke vehicles were involved in <strong style='color:white'>{len(rumpke_df):,} crashes</strong> 
-    across Ohio from 2019–2026, with <strong style='color:white'>{rumpke_df['Fatalities'].sum()} fatalities</strong> and 
-    <strong style='color:white'>{rumpke_df['Injuries'].sum():,} injuries</strong>. 
+    <span style='color:#444444'> Rumpke vehicles were involved in <strong style='color:#cc0000'>{len(rumpke_df):,} crashes</strong> 
+    across Ohio from 2019–2026, with <strong style='color:#cc0000'>{rumpke_df['Fatalities'].sum()} fatalities</strong> and 
+    <strong style='color:#cc0000'>{rumpke_df['Injuries'].sum():,} injuries</strong>. 
     Hamilton County accounts for the highest concentration of Rumpke crashes — directly tied to their Cincinnati HQ operations.</span>
 </div>
 """, unsafe_allow_html=True)
@@ -210,7 +210,7 @@ with tab1:
             <div style='background:#111418;border:1px solid #1f2530;border-radius:8px;
                         padding:10px 14px;margin-bottom:8px;'>
                 <div style='display:flex;justify-content:space-between;align-items:center'>
-                    <span style='color:white;font-weight:500'>{row['County Name']}</span>
+                    <span style='color:#cc0000;font-weight:500'>{row['County Name']}</span>
                     <span style='color:{color};font-family:monospace;font-size:12px'>
                         {int(row['rumpke_crashes'])} Rumpke / {int(row['crashes'])} total
                     </span>
@@ -366,8 +366,8 @@ with tab4:
     st.markdown(f"""
     <div class='alert-box'>
         <strong style='color:#ff3b3b'>Rumpke-Specific Finding:</strong>
-        <span style='color:#9ca3af'> Rumpke vehicles were involved in <strong style='color:white'>{len(rumpke_df):,} crashes</strong> 
-        across Ohio from 2019 to 2026. Of these, <strong style='color:white'>{rumpke_df['Fatalities'].sum()} resulted in fatalities</strong>. 
+        <span style='color:#444444'> Rumpke vehicles were involved in <strong style='color:#cc0000'>{len(rumpke_df):,} crashes</strong> 
+        across Ohio from 2019 to 2026. Of these, <strong style='color:#cc0000'>{rumpke_df['Fatalities'].sum()} resulted in fatalities</strong>. 
         Hamilton County had the most Rumpke crashes — consistent with their Cincinnati headquarters and highest driver density.</span>
     </div>
     """, unsafe_allow_html=True)
@@ -449,7 +449,7 @@ with tab5:
     st.markdown("""
     <div class='alert-box'>
         <strong style='color:#ff3b3b'>Analyst Note:</strong>
-        <span style='color:#9ca3af'> The following recommendations are derived directly from FMCSA MCMIS crash data 
+        <span style='color:#444444'> The following recommendations are derived directly from FMCSA MCMIS crash data 
         (2019–2026) for Ohio commercial truck operations, with specific focus on Rumpke vehicle crash patterns. 
         These complement the OSHA facility injury analysis in Project 1.</span>
     </div>
@@ -510,14 +510,14 @@ with tab5:
                         font-size:11px;font-family:monospace;color:{rec["color"]}'>
                 {rec["tag"]}
             </div>
-            <h3 style='color:white;margin:0 0 10px 0;font-size:18px'>{rec["title"]}</h3>
-            <p style='color:#9ca3af;line-height:1.7;margin:0'>{rec["body"]}</p>
+            <h3 style='color:#cc0000;margin:0 0 10px 0;font-size:18px'>{rec["title"]}</h3>
+            <p style='color:#444444;line-height:1.7;margin:0'>{rec["body"]}</p>
         </div>
         """, unsafe_allow_html=True)
 
     st.markdown("---")
     st.markdown("""
-    <div style='text-align:center;color:#6b7280;font-size:12px;font-family:monospace'>
+    <div style='text-align:center;color:#666666;font-size:12px;font-family:monospace'>
         Data: FMCSA MCMIS Ohio Crash Records 2019–2026 · Snapshot: March 27, 2026<br>
         Built for: Rumpke Safety Data Analyst Application · Rumpke Waste & Recycling · Cincinnati, OH
     </div>
